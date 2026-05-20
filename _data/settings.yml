@@ -20,10 +20,10 @@ seo:
 
 theme:
   colors:
-    background: "#f4efe8"
+    background: "#ffffff"
     surface: "#fbf8f3"
     surface_alt: "#efe7db"
-    text: "#1c2428"
+    text: "#070BF5"
     muted: "#5f6b70"
     accent: "#0b5d66"
     accent_soft: "#d3e7e6"
