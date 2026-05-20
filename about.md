@@ -15,6 +15,8 @@ I am Thanh Cong Le, a solution architect and technology leader with more than tw
 
 My background spans the full path from embedded devices and communication protocols to cloud-native services, data platforms, automation, and modern product delivery. That range has shaped how I work: architecture has to be clear enough to guide decisions, technical enough to survive implementation, and pragmatic enough to move real teams forward.
 
+I also have a strong interest in AI and how it can be applied responsibly in software architecture, engineering practices, product development, and decision support. For me, AI is most valuable when it improves the way teams understand complexity, automate repetitive work, explore better options, and deliver more reliable systems.
+
 ## What I do
 
 I design and lead implementation of scalable smart home, IoT, embedded, cloud, and hybrid cloud architectures. My work includes defining architecture strategy, quality attributes, standards, governance models, and operational practices, while staying close to delivery through implementation guidance, stakeholder collaboration, and team enablement.
@@ -27,6 +29,7 @@ In recent roles at VELUX Electronics and Danfoss Electronics, I have worked on c
 - Cloud-native and hybrid cloud solutions, especially on Azure
 - Distributed architecture, serverless patterns, big data, and event-driven systems
 - Data platforms including Apache Kafka, Kafka Streams, Azure Data Explorer, Azure SQL, MongoDB, and Cosmos DB
+- Practical AI adoption for architecture, engineering workflows, and product innovation
 - Embedded and PC software development with C, C++, C#, Java, and JavaScript
 - Modern UI and cloud application development, including React, .NET Core, and Azure Functions
 - Secure connectivity, PKI, certificates, and software quality practices
