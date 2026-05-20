@@ -1,0 +1,96 @@
+site:
+  title: "Architecture by Design"
+  tagline: "Software Architecture, Technology Leadership, and Pragmatic Innovation"
+  description: "A senior Software Architect's site focused on architecture, delivery, security, cloud, data, and AI innovation."
+  author: "Your Name"
+  hero_image: "/assets/images/hero-architecture.svg"
+  hero_alt: "Abstract architectural skyline built from layered geometric forms"
+  logo: "Architecture by Design"
+  contact_email: "hello@example.com"
+
+seo:
+  title_separator: "|"
+  twitter_card: "summary_large_image"
+  twitter_site: "@yourhandle"
+  default_image: "/assets/images/og-default.svg"
+  keywords:
+    - software architecture
+    - technology leadership
+    - cloud computing
+    - ai innovation
+    - secure development
+
+theme:
+  colors:
+    background: "#f4efe8"
+    surface: "#fbf8f3"
+    surface_alt: "#efe7db"
+    text: "#1c2428"
+    muted: "#5f6b70"
+    accent: "#0b5d66"
+    accent_soft: "#d3e7e6"
+    border: "#d8d0c6"
+    code_bg: "#172125"
+    code_text: "#f8f6f2"
+  fonts:
+    display: '"Fraunces", Georgia, serif'
+    body: '"IBM Plex Sans", "Segoe UI", sans-serif'
+    mono: '"IBM Plex Mono", "SFMono-Regular", monospace'
+  spacing:
+    site_width: "72rem"
+    content_width: "48rem"
+    gutter: "1.5rem"
+    section_y: "5rem"
+    card_radius: "1.25rem"
+  typography:
+    base_size: "17px"
+    scale_ratio: "1.2"
+    hero_title: "clamp(3rem, 7vw, 6.5rem)"
+    page_title: "clamp(2.4rem, 5vw, 4.25rem)"
+  animation:
+    duration: "320ms"
+    easing: "cubic-bezier(0.2, 0.8, 0.2, 1)"
+    page_blur: "12px"
+
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Portfolio"
+    url: "/portfolio/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Contact"
+    url: "/contact/"
+
+themes:
+  - title: "Architecture"
+    url: "/portfolio/#architecture"
+  - title: "Leadership"
+    url: "/portfolio/#agile-leadership"
+  - title: "AI"
+    url: "/portfolio/#ai-innovation"
+  - title: "Cloud"
+    url: "/portfolio/#cloud"
+  - title: "Secure Development"
+    url: "/portfolio/#secure-development"
+
+social:
+  - title: "LinkedIn"
+    url: "https://www.linkedin.com/in/yourprofile"
+    icon: "linkedin"
+  - title: "GitHub"
+    url: "https://github.com/yourhandle"
+    icon: "github"
+  - title: "X"
+    url: "https://x.com/yourhandle"
+    icon: "x"
+  - title: "Email"
+    url: "mailto:hello@example.com"
+    icon: "email"
+
+contact:
+  formspree_endpoint: "https://formspree.io/f/your-form-id"
+  cta_title: "Start a conversation"
+  cta_copy: "Whether the topic is architecture strategy, platform modernization, secure delivery, or AI adoption, I am open to meaningful conversations."

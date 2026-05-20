@@ -1,0 +1,38 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+description: Articles on software architecture, secure development, cloud platforms, AI, and technical leadership.
+---
+
+<section class="section-block">
+  <div class="section-heading compact">
+    <p class="eyebrow">Blog</p>
+    <h1>Writing</h1>
+    <p>Thoughts on architecture, execution, security, cloud, and the leadership work behind durable technology organizations.</p>
+  </div>
+
+  <div class="stack-list">
+    {% for post in paginator.posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+    <nav class="pagination" aria-label="Blog pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+      {% else %}
+        <span aria-disabled="true">Previous</span>
+      {% endif %}
+
+      <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+      {% else %}
+        <span aria-disabled="true">Next</span>
+      {% endif %}
+    </nav>
+  {% endif %}
+</section>

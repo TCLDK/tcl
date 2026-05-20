@@ -1,0 +1,19 @@
+<section class="hero-block">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      {% if page.hero_kicker %}<p class="eyebrow">{{ page.hero_kicker }}</p>{% endif %}
+      <h1>{{ page.hero_title | default: page.title }}</h1>
+      {% if page.hero_excerpt %}<p class="hero-excerpt">{{ page.hero_excerpt }}</p>{% endif %}
+      {% if page.hero_actions %}
+        <div class="hero-actions">
+          {% for action in page.hero_actions %}
+            <a class="button {% if action.style == 'secondary' %}button-secondary{% else %}button-primary{% endif %}" href="{{ action.url | relative_url }}">{{ action.label }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="hero-media">
+      <img src="{{ page.hero_image | default: site.data.settings.site.hero_image | relative_url }}" alt="{{ page.hero_alt | default: site.data.settings.site.hero_alt }}" loading="eager">
+    </div>
+  </div>
+</section>

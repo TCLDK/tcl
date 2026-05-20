@@ -1,0 +1,61 @@
+---
+layout: page
+title: Architecture by Design
+permalink: /
+description: Executive-level software architecture, delivery leadership, and pragmatic innovation for growth-focused organizations.
+hero_title: Designing resilient systems and teams that can scale.
+hero_kicker: Senior Software Architect and transformational technology leader
+hero_excerpt: >-
+  I help organizations turn architecture strategy into measurable delivery outcomes across cloud platforms,
+  secure software development, AI innovation, distributed systems, and data-intensive products.
+hero_actions:
+  - label: View Portfolio
+    url: /portfolio/
+    style: primary
+  - label: Read the Blog
+    url: /blog/
+    style: secondary
+hero_image: /assets/images/hero-architecture.svg
+hero_alt: Layered geometric forms suggesting architecture diagrams and city skylines
+---
+
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Positioning</p>
+    <h2>Architecture leadership grounded in delivery reality.</h2>
+    <p>I work at the intersection of architecture, execution, and team enablement. The focus is not abstract theory. It is secure, scalable systems, strong technical cultures, and decisions that compound over time.</p>
+  </div>
+</section>
+
+<section class="section-block home-grid">
+  <div>
+    <p class="eyebrow">Featured Portfolio</p>
+    <div class="card-grid">
+      {% assign featured_portfolio = site.portfolio | where: "featured", true | sort: "date" | reverse | slice: 0, 3 %}
+      {% for item in featured_portfolio %}
+        {% include portfolio-card.html item=item %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <aside class="theme-panel">
+    <p class="eyebrow">Themes</p>
+    <ul class="theme-list">
+      {% for theme in site.data.settings.themes %}
+        <li><a href="{{ theme.url | relative_url }}">{{ theme.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Latest Writing</p>
+    <h2>Notes on architecture, modernization, AI, and technical leadership.</h2>
+  </div>
+  <div class="card-grid post-grid">
+    {% for post in site.posts limit:3 %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+</section>

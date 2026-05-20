@@ -1,0 +1,14 @@
+<article class="content-card portfolio-card">
+  {% if include.item.featured_image %}
+    <img src="{{ include.item.featured_image | relative_url }}" alt="{{ include.item.featured_image_alt | default: include.item.title }}" loading="lazy">
+  {% endif %}
+  <div class="card-copy">
+    <p class="card-meta">{{ include.item.category }}</p>
+    <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+    <p>{{ include.item.subtitle }}</p>
+    <div class="card-footer">
+      <span>{{ include.item.role }}</span>
+      <span>{{ include.item.date | date: "%Y" }}</span>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,15 @@
+{% assign carousel_name = include.carousel_id | default: page.slug | default: 'gallery' %}
+<section class="carousel-block" aria-label="Carousel gallery">
+  <div class="carousel-shell" data-carousel="{{ carousel_name }}">
+    <button class="carousel-control" type="button" data-carousel-prev aria-label="Previous image">Previous</button>
+    <div class="carousel-track" tabindex="0">
+      {% for image in include.images %}
+        <figure class="carousel-slide">
+          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" loading="lazy">
+          {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+    <button class="carousel-control" type="button" data-carousel-next aria-label="Next image">Next</button>
+  </div>
+</section>

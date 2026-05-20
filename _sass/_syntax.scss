@@ -1,0 +1,27 @@
+.highlight {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  border-radius: 1rem;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kr {
+  color: #8dd0d5;
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
+  color: #d8c08d;
+}
+
+.highlight .nf,
+.highlight .nc {
+  color: #f2f0ea;
+}
+
+.highlight .c,
+.highlight .c1 {
+  color: #8ea0a5;
+}

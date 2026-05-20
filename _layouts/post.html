@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% assign words = content | strip_html | number_of_words %}
+{% assign reading_time = words | plus: 179 | divided_by: 180 %}
+{% if reading_time < 1 %}{% assign reading_time = 1 %}{% endif %}
+
+<article class="content-shell reading-layout" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="reading-header">
+    <p class="eyebrow">Blog</p>
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    <div class="reading-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time>
+      <span>{{ reading_time }} min read</span>
+      {% if page.categories and page.categories.size > 0 %}
+        <span>{{ page.categories | join: " · " }}</span>
+      {% endif %}
+    </div>
+    {% if page.excerpt %}
+      <p class="lead" itemprop="description">{{ page.excerpt | strip_html }}</p>
+    {% endif %}
+    {% if page.featured_image %}
+      <img src="{{ page.featured_image | relative_url }}" alt="{{ page.featured_image_alt | default: page.title }}" class="featured-media" loading="eager" itemprop="image">
+    {% endif %}
+  </header>
+
+  <div class="prose" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if page.gallery_images and page.gallery_images.size > 0 %}
+    {% include gallery-grid.html images=page.gallery_images %}
+  {% endif %}
+
+  {% if page.carousel_images and page.carousel_images.size > 0 %}
+    {% include gallery-carousel.html images=page.carousel_images carousel_id=page.slug %}
+  {% endif %}
+
+  <footer class="reading-footer">
+    {% if page.tags and page.tags.size > 0 %}
+      <div class="tag-list" aria-label="Post tags">
+        {% for tag in page.tags %}
+          <span>{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </footer>
+</article>

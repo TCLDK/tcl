@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% include seo.html %}
+    <style>
+      :root {
+        --color-bg: {{ site.data.settings.theme.colors.background }};
+        --color-surface: {{ site.data.settings.theme.colors.surface }};
+        --color-surface-alt: {{ site.data.settings.theme.colors.surface_alt }};
+        --color-text: {{ site.data.settings.theme.colors.text }};
+        --color-muted: {{ site.data.settings.theme.colors.muted }};
+        --color-accent: {{ site.data.settings.theme.colors.accent }};
+        --color-accent-soft: {{ site.data.settings.theme.colors.accent_soft }};
+        --color-border: {{ site.data.settings.theme.colors.border }};
+        --color-code-bg: {{ site.data.settings.theme.colors.code_bg }};
+        --color-code-text: {{ site.data.settings.theme.colors.code_text }};
+        --font-display: {{ site.data.settings.theme.fonts.display }};
+        --font-body: {{ site.data.settings.theme.fonts.body }};
+        --font-mono: {{ site.data.settings.theme.fonts.mono }};
+        --site-width: {{ site.data.settings.theme.spacing.site_width }};
+        --content-width: {{ site.data.settings.theme.spacing.content_width }};
+        --gutter: {{ site.data.settings.theme.spacing.gutter }};
+        --section-y: {{ site.data.settings.theme.spacing.section_y }};
+        --card-radius: {{ site.data.settings.theme.spacing.card_radius }};
+        --font-base: {{ site.data.settings.theme.typography.base_size }};
+        --hero-size: {{ site.data.settings.theme.typography.hero_title }};
+        --page-size: {{ site.data.settings.theme.typography.page_title }};
+        --anim-duration: {{ site.data.settings.theme.animation.duration }};
+        --anim-easing: {{ site.data.settings.theme.animation.easing }};
+        --page-blur: {{ site.data.settings.theme.animation.page_blur }};
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include header.html %}
+    <main id="main-content" class="site-main" data-page-shell>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  </body>
+</html>

@@ -36,3 +36,9 @@
 ehthumbs.db
 Thumbs.db
 
+# Jekyll and Bundler artifacts #
+###############################
+.bundle/
+_site/
+vendor/
+

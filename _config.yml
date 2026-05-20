@@ -1,1 +1,60 @@
-theme: minima
+title: "Architecture by Design"
+email: "hello@example.com"
+description: >-
+  Personal website for a senior Software Architect and transformational technology
+  leader focused on secure, scalable, and innovative delivery.
+baseurl: ""
+url: "https://example.github.io"
+timezone: "UTC"
+lang: "en"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
+permalink: /blog/:title/
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/images/og-default.svg
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: portfolio
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+feed:
+  path: feed.xml
+
+exclude:
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

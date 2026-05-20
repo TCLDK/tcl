@@ -1,0 +1,18 @@
+{% assign seo_title = page.title | default: site.data.settings.site.title %}
+{% assign seo_description = page.description | default: page.excerpt | default: site.data.settings.site.description | strip_html | normalize_whitespace %}
+{% assign seo_image = page.image | default: page.featured_image | default: site.data.settings.seo.default_image %}
+<title>{{ seo_title }} {{ site.data.settings.seo.title_separator }} {{ site.data.settings.site.title }}</title>
+<meta name="description" content="{{ seo_description }}">
+<meta name="theme-color" content="{{ site.data.settings.theme.colors.background }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ seo_title }}">
+<meta property="og:description" content="{{ seo_description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ seo_image | absolute_url }}">
+<meta property="og:site_name" content="{{ site.data.settings.site.title }}">
+<meta name="twitter:card" content="{{ site.data.settings.seo.twitter_card }}">
+<meta name="twitter:title" content="{{ seo_title }}">
+<meta name="twitter:description" content="{{ seo_description }}">
+<meta name="twitter:image" content="{{ seo_image | absolute_url }}">
+<meta name="twitter:site" content="{{ site.data.settings.seo.twitter_site }}">
+{% seo title=false %}

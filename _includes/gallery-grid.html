@@ -1,0 +1,10 @@
+<section class="gallery-block" aria-label="Image gallery">
+  <div class="gallery-grid">
+    {% for image in include.images %}
+      <figure class="gallery-item">
+        <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" loading="lazy">
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+  </div>
+</section>
