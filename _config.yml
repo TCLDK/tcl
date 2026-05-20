@@ -3,8 +3,8 @@ email: "hello@example.com"
 description: >-
   Personal website for a senior Software Architect and transformational technology
   leader focused on secure, scalable, and innovative delivery.
-baseurl: ""
-url: "https://example.github.io"
+baseurl: "/tcl"
+url: "https://tcldk.github.io"
 timezone: "UTC"
 lang: "en"
 markdown: kramdown
