@@ -37,6 +37,7 @@
 }
 
 .brand-mark {
+  color: var(--color-accent);
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 600;
@@ -65,6 +66,7 @@
 
 .hero-copy h1 {
   max-width: 13ch;
+  color: var(--color-text);
   font-size: var(--hero-size);
 }
 
@@ -111,6 +113,7 @@
 }
 
 .reading-header h1 {
+  color: var(--color-text);
   font-size: var(--page-size);
 }
 
