@@ -6,12 +6,10 @@ site:
   hero_image: "/assets/images/hero-architecture.svg"
   hero_alt: "Abstract architectural skyline built from layered geometric forms"
   logo: "Architecture by Design"
-  contact_email: "hello@example.com"
+  contact_email: "tcldk12@gmail.com"
 
 seo:
   title_separator: "|"
-  twitter_card: "summary_large_image"
-  twitter_site: "@yourhandle"
   default_image: "/assets/images/og-default.svg"
   keywords:
     - software architecture
@@ -78,16 +76,13 @@ themes:
 
 social:
   - title: "LinkedIn"
-    url: "https://www.linkedin.com/in/yourprofile"
+    url: "https://www.linkedin.com/in/thanh-cong-le"
     icon: "linkedin"
   - title: "GitHub"
-    url: "https://github.com/yourhandle"
+    url: "https://github.com/TCLDK/"
     icon: "github"
-  - title: "X"
-    url: "https://x.com/yourhandle"
-    icon: "x"
   - title: "Email"
-    url: "mailto:hello@example.com"
+    url: "mailto:tcldk12@gmail.com"
     icon: "email"
 
 contact:
