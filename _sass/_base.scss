@@ -11,10 +11,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(11, 93, 102, 0.11), transparent 32%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.6), transparent 30%),
-    var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--font-base);
@@ -45,10 +42,11 @@ h2,
 h3,
 h4 {
   margin: 0 0 1rem;
+  color: var(--color-accent);
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 h2 {

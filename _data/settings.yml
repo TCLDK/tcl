@@ -21,13 +21,13 @@ seo:
 theme:
   colors:
     background: "#ffffff"
-    surface: "#fbf8f3"
-    surface_alt: "#efe7db"
-    text: "#070BF5"
-    muted: "#5f6b70"
-    accent: "#0b5d66"
-    accent_soft: "#d3e7e6"
-    border: "#d8d0c6"
+    surface: "#ffffff"
+    surface_alt: "#ffffff"
+    text: "#000000"
+    muted: "#000000"
+    accent: "#070BF5"
+    accent_soft: "#e7e8ff"
+    border: "#d8d8d8"
     code_bg: "#172125"
     code_text: "#f8f6f2"
   fonts:
