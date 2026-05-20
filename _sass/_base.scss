@@ -171,6 +171,12 @@ td {
   color: var(--color-text);
 }
 
+.content-shell > h2,
+.content-shell > h3,
+.content-shell > h4 {
+  color: var(--color-text);
+}
+
 .section-heading.compact {
   margin-bottom: 1.5rem;
 }
