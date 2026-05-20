@@ -179,6 +179,12 @@ td {
   max-width: var(--content-width);
 }
 
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--color-text);
+}
+
 .prose > * + * {
   margin-top: 1.2rem;
 }
