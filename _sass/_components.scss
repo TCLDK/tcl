@@ -8,6 +8,7 @@
   padding: 0.75rem 0;
   border: 0;
   background: transparent;
+  color: var(--color-accent);
   font: inherit;
 }
 
@@ -21,11 +22,11 @@
 
 .nav-list a {
   text-decoration: none;
-  color: var(--color-muted);
+  color: var(--color-accent);
 }
 
 .nav-list a[aria-current="page"] {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .card-grid,
