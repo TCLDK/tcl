@@ -104,6 +104,10 @@
   list-style: none;
 }
 
+.theme-list a {
+  color: var(--color-accent);
+}
+
 .reading-layout {
   padding-top: 4rem;
 }
