@@ -1,67 +1,56 @@
-# Architecture by Design
+# Thanh Cong Le Personal Website
 
-A complete GitHub Pages and Jekyll personal site for a senior Software Architect and transformational technology leader. The design is minimal, premium, responsive, and fully compatible with GitHub Pages-supported plugins.
+This repository contains the source files for my personal website and portfolio. The site presents my background in software architecture, embedded systems, IoT, cloud platforms, data, agile delivery, and technology leadership.
 
-## Features
+The site is built with Jekyll and is intended to run on GitHub Pages.
 
-- GitHub Pages-compatible Jekyll setup
-- Home, About, Portfolio, Blog, Contact, and 404 pages
-- `_portfolio` collection for architecture case studies and leadership work
-- Paginated blog index with categories, tags, reading time, and code highlighting
-- Reusable gallery grid and carousel includes for posts and portfolio items
-- Formspree contact form integration
-- SEO metadata, Open Graph, Twitter Cards, sitemap, robots.txt, and RSS feed
-- Centralized design and content settings in `_data/settings.yml`
-- Vanilla JavaScript Ajax navigation with graceful no-JavaScript fallback
+## Site Content
 
-## Local setup
+Main content areas:
+
+- `index.html` - home page
+- `about.md` - personal and professional profile
+- `portfolio.md` and `_portfolio/` - portfolio overview and case-study entries
+- `blog/index.html` and `_posts/` - blog index and posts
+- `contact.md` - contact page
+- `_data/settings.yml` - site title, navigation, theme settings, social links, and contact configuration
+
+## Local Setup
 
 1. Install Ruby and Bundler.
 2. Run `bundle install`.
 3. Run `bundle exec jekyll serve`.
 4. Open the local address shown by Jekyll, usually `http://127.0.0.1:4000`.
 
-## GitHub Pages deployment
+## GitHub Pages Deployment
 
-1. Push the repository to GitHub.
+1. Push changes to GitHub.
 2. In the repository settings, open Pages.
 3. Set the source to deploy from the `main` branch root.
-4. If you use a project site instead of a user site, update `url` and `baseurl` in `_config.yml`.
+4. Confirm `url` and `baseurl` in `_config.yml` match the published GitHub Pages address.
 
-The site uses only GitHub Pages-compatible plugins:
+Current project-site configuration:
 
-- `jekyll-feed`
-- `jekyll-paginate`
-- `jekyll-seo-tag`
-- `jekyll-sitemap`
+```yaml
+url: "https://tcldk.github.io"
+baseurl: "/tcl"
+```
 
-## Configure the site
+## Editing Profile Information
 
-Most site-wide settings live in `_data/settings.yml`.
+The About page uses information from my CV, but it is written for a public website rather than as a full CV. Before publishing, review it for:
 
-You can change:
+- role titles and company names
+- technology lists
+- education details
+- language details
+- anything private or too specific for public use
 
-- site title, description, author name, and hero image
-- colors, fonts, spacing, typography, and animation timing
-- primary navigation and themed home links
-- social profile links
-- Formspree endpoint
-- SEO defaults and social preview settings
+Contact details, private addresses, phone numbers, and personal identifiers should not be added unless they are intentionally public.
 
-Core Jekyll behavior lives in `_config.yml`.
+## Add Portfolio Items
 
-## Configure Formspree
-
-1. Create a form in Formspree.
-2. Copy the endpoint URL, for example `https://formspree.io/f/abcd1234`.
-3. Replace `contact.formspree_endpoint` in `_data/settings.yml`.
-
-The contact form fields are already wired for name, email, subject, and message.
-
-## Add portfolio items
-
-1. Add a new Markdown file to `_portfolio`.
-2. Use front matter like this:
+Add a new Markdown file to `_portfolio` with front matter like this:
 
 ```yaml
 ---
@@ -70,18 +59,11 @@ subtitle: Short summary
 date: 2026-01-15
 category: Architecture
 technologies:
-  - Kubernetes
-  - Terraform
+  - Azure
+  - Kafka
 role: Lead Architect
-impact: Reduced lead time and improved resilience.
+impact: Short description of the outcome.
 featured_image: /assets/images/portfolio-example.svg
-gallery_images:
-  - src: /assets/images/example-grid.svg
-    alt: Example image
-    caption: Optional caption
-carousel_images:
-  - src: /assets/images/example-carousel.svg
-    alt: Example slide
 featured: true
 ---
 ```
@@ -95,10 +77,11 @@ Supported categories in the current structure:
 - Big Data
 - Agile Leadership
 
-## Add blog posts
+## Add Blog Posts
 
-1. Add a Markdown file to `_posts` using the format `YYYY-MM-DD-title.md`.
-2. Use front matter like this:
+Add a Markdown file to `_posts` using the format `YYYY-MM-DD-title.md`.
+
+Example front matter:
 
 ```yaml
 ---
@@ -111,50 +94,33 @@ featured_image: /assets/images/post-example.svg
 ---
 ```
 
-Posts support standard Markdown, Rouge code highlighting, gallery grids, and carousels via front matter.
+Posts support standard Markdown, Rouge code highlighting, gallery grids, and carousels through the existing includes.
 
-## Gallery usage
+## Design And Configuration
 
-Grid include:
+Most site-wide settings live in `_data/settings.yml`, including:
 
-```liquid
-{% raw %}{% include gallery-grid.html images=page.gallery_images %}{% endraw %}
-```
+- site title, tagline, description, author, and logo text
+- theme colors, fonts, spacing, and typography
+- navigation links
+- social profile links
+- Formspree contact endpoint
+- SEO defaults
 
-Carousel include:
-
-```liquid
-{% raw %}{% include gallery-carousel.html images=page.carousel_images carousel_id=page.slug %}{% endraw %}
-```
-
-## Customize design
-
-Design tokens are defined in `_data/settings.yml` and injected as CSS custom properties in the default layout. This keeps visual customization centralized while the SCSS partials in `_sass` remain maintainable.
+Core Jekyll behavior lives in `_config.yml`.
 
 Main structure:
 
-- `_layouts` for page, blog, and portfolio layouts
-- `_includes` for reusable components
-- `_sass` and `assets/css/main.scss` for styling
-- `assets/js/site.js` for navigation, transitions, and carousel behavior
+- `_layouts/` - page, blog, and portfolio layouts
+- `_includes/` - reusable components
+- `_sass/` and `assets/css/main.scss` - styling
+- `assets/js/site.js` - navigation, transitions, and carousel behavior
+- `assets/images/` - visual assets
 
-## Notes
+## Before Publishing
 
-- Replace placeholder profile links, email address, author name, and Formspree endpoint before publishing.
-- Replace or supplement the SVG artwork in `assets/images` with your own optimized images if desired.
-- `assets/images/og-default.jpg` should be replaced with a real social preview image before production use.# GitHub Pages
-
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
-
-Hey TCLDK!
-
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
-
-Remember, it's self-paced so feel free to take a break! ☕️
-
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/TCLDK/skills-github-pages/issues/1)
-
----
-
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
+- Replace placeholder values in `_data/settings.yml`, including author, email, social links, and Formspree endpoint.
+- Review all profile text for public sharing.
+- Review portfolio and blog content for confidential or company-sensitive information.
+- Replace or supplement placeholder SVG artwork if needed.
+- Run `bundle exec jekyll build` before publishing when Bundler is available.
